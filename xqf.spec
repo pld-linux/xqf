@@ -18,7 +18,7 @@ BuildRequires:	automake
 BuildRequires:	bzip2-devel
 %{?with_geoip:BuildRequires:	GeoIP-devel}
 %{?with_gtk1:BuildRequires:	gdk-pixbuf-devel}
-%{!?with_gtk1:BuildRequires:	gtk+2-devel >= 2.0.0}
+%{!?with_gtk1:BuildRequires:	gtk+2-devel >= 1:2.0.0}
 %{?with_gtk1:BuildRequires:	gtk+-devel >= 1.2.0}
 BuildRequires:	qstat >= 2.6
 Requires:	qstat >= 2.6
