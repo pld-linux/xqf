@@ -1,10 +1,10 @@
 # 
 # Conditional build:
-%bcond_without	geoip
-%bcond_without	gtk2
+%bcond_without	geoip	# without GeoIP
+%bcond_with	gtk1	# use GTK+ 1.x instead of 2.x
 #
-Summary:	XQF - a GTK frontend to qstat
-Summary(pl):	XQF - graficzny (GTK) interfejs do qstat
+Summary:	XQF - a GTK+ frontend to qstat
+Summary(pl):	XQF - graficzny (oparty na GTK+) interfejs do qstat
 Name:		xqf
 Version:	0.9.14
 Release:	1
@@ -14,13 +14,12 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	e2d1d5c3d3b1f6e669958752b10b8d3d
 Patch0:		%{name}-desktop.patch
 URL:		http://www.linuxgames.com/xqf/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	bzip2-devel
-BuildRequires:	qstat >= 2.5b
 %{?with_geoip:BuildRequires:	GeoIP-devel}
-%{!?with_gtk2:BuildRequires:	gtk+-devel >= 1.2.0}
-%{!?with_gtk2:BuildRequires:	gdk-pixbuf-devel}
-%{?with_gtk2:BuildRequires:	gtk+2-devel >= 2.0.0}
+%{?with_gtk1:BuildRequires:	gdk-pixbuf-devel}
+%{!?with_gtk1:BuildRequires:	gtk+2-devel >= 2.0.0}
+%{?with_gtk1:BuildRequires:	gtk+-devel >= 1.2.0}
+BuildRequires:	qstat >= 2.5b
 Requires:	qstat >= 2.5b
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,8 +29,8 @@ launcher for Linux/X11. xqf is a GTK-based frontend to qstat.
 
 %description -l pl
 xqf jest przegl±dark± serwerów i programem u³atwiaj±cym uruchamianie 
-QuakeWorld, Quake2, Quake3, Tribes2, itd. Jest opartym na GTK graficznym
-interfejsem dla qstat.
+QuakeWorld, Quake2, Quake3, Tribes2, itd. Jest opartym na GTK+
+graficznym interfejsem dla qstat.
 
 %prep
 %setup -q
@@ -39,16 +38,18 @@ interfejsem dla qstat.
 
 %build
 %configure \
-    --enable-bzip2 \
-    %{?with_gtk2:--enable-gtk2} \
-    %{!?with_geoip:--disable-geoip} \
-    %{?with_geoip:--enable-geoip}
+	--enable-bzip2 \
+	%{!?with_gtk1:--enable-gtk2} \
+	%{!?with_geoip:--disable-geoip} \
+	%{?with_geoip:--enable-geoip}
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
@@ -58,8 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README AUTHORS BUGS ChangeLog NEWS TODO
-%attr(0755,root,root)%{_bindir}/xqf
-%{_datadir}/xqf/
-%{_mandir}/man6/xqf.6.gz
+%attr(755,root,root) %{_bindir}/xqf
+%{_datadir}/xqf
+%{_mandir}/man6/xqf.6*
 %{_desktopdir}/*
 %{_pixmapsdir}/*
