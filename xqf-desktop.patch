@@ -1,7 +1,6 @@
-diff -ru xqf-0.9.14.orig/xqf.desktop xqf-0.9.14/xqf.desktop
---- xqf-0.9.14.orig/xqf.desktop	2004-03-20 21:49:05.000000000 +0100
-+++ xqf-0.9.14/xqf.desktop	2004-03-29 12:25:52.699641056 +0200
-@@ -17,4 +17,4 @@
+--- xqf-1.0/xqf.desktop.in.orig 2004-09-24 23:06:35.096636472 +0200
++++ xqf-1.0/xqf.desktop.in 2004-09-24 23:06:49.339471232 +0200
+@@ -8,4 +8,4 @@
  StartupNotify=true
  Terminal=false
  Type=Application
