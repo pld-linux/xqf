@@ -1,7 +1,4 @@
 # 
-# TODO:
-# - pl desc
-# 
 # Conditional build:
 %bcond_without	geoip
 %bcond_without	gtk2
@@ -28,9 +25,13 @@ Requires:	qstat >= 2.5b
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-XQF is QuakeWorld, Quake2, Quake3, Tribes2, etc. server browser and
-launcher for Linux/X11. It uses the GTK toolkit. XQF is a frontend to
-QStat.
+xqf is QuakeWorld, Quake2, Quake3, Tribes2, etc. server browser and
+launcher for Linux/X11. xqf is a GTK-based frontend to qstat.
+
+%description -l pl
+xqf jest przegl±dark± serwerów i programem u³atwiaj±cym uruchamianie 
+QuakeWorld, Quake2, Quake3, Tribes2, itd. Jest opartym na GTK graficznym
+interfejsem dla qstat.
 
 %prep
 %setup -q
