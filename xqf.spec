@@ -14,9 +14,9 @@ Source0:	http://dl.sourceforge.net/xqf/%{name}-%{version}.tar.gz
 # Source0-md5:	93fe649271a84fbe9837b89554a0337a
 Patch0:		%{name}-desktop.patch
 URL:		http://www.linuxgames.com/xqf/
+%{?with_geoip:BuildRequires:	GeoIP-devel}
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
-%{?with_geoip:BuildRequires:	GeoIP-devel}
 %{?with_gtk1:BuildRequires:	gdk-pixbuf-devel}
 %{!?with_gtk1:BuildRequires:	gtk+2-devel >= 1:2.0.0}
 %{?with_gtk1:BuildRequires:	gtk+-devel >= 1.2.0}
