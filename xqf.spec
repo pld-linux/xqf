@@ -1,9 +1,13 @@
+# 
+# TODO:
+# - pl desc
+# 
 # Conditional build:
 %bcond_without	geoip
 %bcond_without	gtk2
 #
-
-Summary:	XQF
+Summary:	XQF - a GTK frontend to qstat
+Summary(pl):	XQF - graficzny (GTK) interfejs do qstat
 Name:		xqf
 Version:	0.9.14
 Release:	1
@@ -11,6 +15,7 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-desktop.patch
+URL:		http://www.linuxgames.com/xqf/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	bzip2-devel
 BuildRequires:	qstat >= 2.5b
@@ -19,9 +24,7 @@ BuildRequires:	qstat >= 2.5b
 %{!?with_gtk2:BuildRequires:	gdk-pixbuf-devel}
 %{?with_gtk2:BuildRequires:	gtk+2-devel >= 2.0.0}
 Requires:	qstat >= 2.5b
-URL:		http://www.linuxgames.com/xqf/
-
-%define		_prefix	/usr
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 XQF is QuakeWorld, Quake2, Quake3, Tribes2, etc. server browser and
@@ -29,7 +32,6 @@ launcher for Linux/X11. It uses the GTK toolkit. XQF is a frontend to
 QStat.
 
 %prep
-
 %setup -q
 %patch -p1
 
