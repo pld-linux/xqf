@@ -5,5 +5,5 @@
  Terminal=false
  Type=Application
 -Categories=X-SuSE-Core-Game;Application;Game;
-+Categories=Application;Game;
++Categories=GTK;Game;
 
