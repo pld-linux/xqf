@@ -1,0 +1,10 @@
+diff -ru xqf-0.9.14.orig/xqf.desktop xqf-0.9.14/xqf.desktop
+--- xqf-0.9.14.orig/xqf.desktop	2004-03-20 21:49:05.000000000 +0100
++++ xqf-0.9.14/xqf.desktop	2004-03-29 12:25:52.699641056 +0200
+@@ -17,4 +17,4 @@
+ StartupNotify=true
+ Terminal=false
+ Type=Application
+-Categories=X-SuSE-Core-Game;Application;Game;
++Categories=Application;Game;
+
