@@ -14,6 +14,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	e2d1d5c3d3b1f6e669958752b10b8d3d
 Patch0:		%{name}-desktop.patch
 URL:		http://www.linuxgames.com/xqf/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
