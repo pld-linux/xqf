@@ -9,7 +9,7 @@ Name:		xqf
 Version:	1.0
 Release:	1
 License:	GPL
-Group:		X11/Applications
+Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	b56d76781b4444d1d25d8f772b88a477
 Patch0:		%{name}-desktop.patch
