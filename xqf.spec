@@ -35,7 +35,7 @@ graficznym interfejsem dla qstat.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
 
 %build
 cp /usr/share/automake/config.sub .
