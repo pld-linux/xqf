@@ -64,5 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/xqf
 %{_datadir}/xqf
 %{_mandir}/man6/xqf.6*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
