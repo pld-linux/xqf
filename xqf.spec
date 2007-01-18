@@ -6,12 +6,12 @@
 Summary:	XQF - a GTK+ frontend to qstat
 Summary(pl):	XQF - graficzny (oparty na GTK+) interfejs do qstat
 Name:		xqf
-Version:	1.0.4
+Version:	1.0.5
 Release:	1
-License:	GPL v2
+License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/xqf/%{name}-%{version}.tar.gz
-# Source0-md5:	d060838d0846b3846076e4ed02fc2b34
+# Source0-md5:	a88cecba6abb6349107ab135f1009946
 Patch0:		%{name}-desktop.patch
 URL:		http://www.linuxgames.com/xqf/
 %{?with_geoip:BuildRequires:	GeoIP-devel}
@@ -60,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README AUTHORS BUGS ChangeLog NEWS TODO
+%doc AUTHORS ChangeLog BUGS NEWS README TODO
 %attr(755,root,root) %{_bindir}/xqf
 %{_datadir}/xqf
 %{_mandir}/man6/xqf.6*
