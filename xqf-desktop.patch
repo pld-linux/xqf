@@ -1,9 +1,15 @@
---- xqf-1.0/xqf.desktop.in.orig 2004-09-24 23:06:35.096636472 +0200
-+++ xqf-1.0/xqf.desktop.in 2004-09-24 23:06:49.339471232 +0200
-@@ -8,4 +8,4 @@
+--- xqf-1.0.5/xqf.desktop.in~	2007-01-18 15:49:43.000000000 +0100
++++ xqf-1.0.5/xqf.desktop.in	2007-01-18 15:48:53.000000000 +0100
+@@ -3,9 +3,11 @@
+ _Name=XQF Game Server Browser
+ _GenericName=Game Server Browser
+ _Comment=Locate and connect to game servers
++_Comment[pl]=Narzędzie pozwalające lokalizować i łączyć się z serwerami gier
+ Exec=xqf
+ Icon=xqf_32x32.png
  StartupNotify=true
  Terminal=false
  Type=Application
--Categories=X-SuSE-Core-Game;Application;Game;
+-Categories=GTK;Game;ActionGame;X-SuSE-Core-Game;
 +Categories=GTK;Game;
-
++# vi: encoding=utf-8
