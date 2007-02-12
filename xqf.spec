@@ -4,7 +4,7 @@
 %bcond_with	gtk1	# use GTK+ 1.x instead of 2.x
 #
 Summary:	XQF - a GTK+ frontend to qstat
-Summary(pl):	XQF - graficzny (oparty na GTK+) interfejs do qstat
+Summary(pl.UTF-8):   XQF - graficzny (oparty na GTK+) interfejs do qstat
 Name:		xqf
 Version:	1.0.5
 Release:	1
@@ -28,8 +28,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 xqf is QuakeWorld, Quake2, Quake3, Tribes2, etc. server browser and
 launcher for Linux/X11. xqf is a GTK-based frontend to qstat.
 
-%description -l pl
-xqf jest przegl±dark± serwerów i programem u³atwiaj±cym uruchamianie 
+%description -l pl.UTF-8
+xqf jest przeglÄ…darkÄ… serwerÃ³w i programem uÅ‚atwiajÄ…cym uruchamianie 
 QuakeWorld, Quake2, Quake3, Tribes2, itd. Jest opartym na GTK+
 graficznym interfejsem dla qstat.
 
