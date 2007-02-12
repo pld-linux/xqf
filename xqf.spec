@@ -4,7 +4,7 @@
 %bcond_with	gtk1	# use GTK+ 1.x instead of 2.x
 #
 Summary:	XQF - a GTK+ frontend to qstat
-Summary(pl.UTF-8):   XQF - graficzny (oparty na GTK+) interfejs do qstat
+Summary(pl.UTF-8):	XQF - graficzny (oparty na GTK+) interfejs do qstat
 Name:		xqf
 Version:	1.0.5
 Release:	1
